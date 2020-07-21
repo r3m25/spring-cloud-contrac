@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class Customer {
     private String name;
     private String lastName;
+    private String phone;
 }

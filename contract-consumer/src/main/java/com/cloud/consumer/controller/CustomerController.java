@@ -40,6 +40,7 @@ public class CustomerController {
         return Customer.builder()
                 .name(customerClient.getName())
                 .lastName(customerClient.getFullName())
+                .phone(customerClient.getPhone())
                 .build();
     }
 

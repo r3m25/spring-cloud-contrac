@@ -17,9 +17,9 @@ org.springframework.cloud.contract.spec.Contract.make {
         }
         body("""
               {
-                "name": "ruben",
-                "fullName": "morales",
-                "phone": "965827070"
+                "name": "user",
+                "fullName": "fullName",
+                "phone": "987654321"
               }
         """)
     }

@@ -32,8 +32,9 @@ class CustomerContractTest {
         mockMvc.perform(MockMvcRequestBuilders.get("/test/customer")
                 .contentType(APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name", is("ruben")))
-                .andExpect(jsonPath("$.lastName", is("morales")))
+                .andExpect(jsonPath("$.name", is("user")))
+                .andExpect(jsonPath("$.lastName", is("fullName")))
+                .andExpect(jsonPath("$.phone", is("987654321")))
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE));
     }
 
