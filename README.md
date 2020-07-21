@@ -55,7 +55,7 @@ after create your contract, if you're using maven, you have to execute this comm
 mvn clean install -DskipTests 
 ```
 
-this command generate a stubs jar target/ and mapping wiremock in target/stubs/*
+this command generate a stubs jar in target/ folder and mapping wiremock in target/stubs/* 
 
 ### Consumer
 
