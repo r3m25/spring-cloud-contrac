@@ -1,6 +1,6 @@
 # spring-cloud-contrac
 
-In this sampple you can see a useful implementation with spring cloud contract. There are two projects, producer and consumer.
+In this sampple you can see a useful implementation with spring cloud contract. In this repo you can find two projects, producer and consumer.
 
 ## Getting Started
 
