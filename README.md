@@ -16,7 +16,7 @@ to start work with Spring Cloud Contract in producer side, you have to add in yo
 </dependency>
 ```
 
-### Your contract test example
+#### Your contract test example
 
 create this contract in java/test/contracts path.
 
@@ -70,3 +70,30 @@ To get started, add the dependency to Spring Cloud Contract Stub Runner, as foll
     <scope>test</scope>
 </dependency>
 ```
+
+#### Your test consumer stubs
+
+These anotation you must use when define a test contract:
+
+```
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+@AutoConfigureStubRunner(stubsMode = StubsMode.LOCAL, ids ="com.cloud:contract-producer:+:stubs:8091")
+class ContractTestExample { 
+
+    // your test code.
+
+}
+
+```
+
+When you use @AutoConfigureStubRunner anotation, it looks for a stub jar that has been generetaed since producer side in repository jar, for example: 
+
+* if you are working in local env and you are unisig .m2, you should use StubsMode.LOCAL.
+
+* if you are unsing a remote repo like Artifactory for example, you should use StubsMode.REMOTE.
+
+
+
+
