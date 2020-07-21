@@ -16,6 +16,47 @@ to start work with Spring Cloud Contract in producer side, you have to add in yo
 </dependency>
 ```
 
+### Your contract test example
+
+create this contract in java/test/contracts path.
+
+```
+package contracts
+
+org.springframework.cloud.contract.spec.Contract.make {
+
+    description("Should return all customer")
+    request {
+        method('GET')
+        urlPath('/example')
+        headers {
+            contentType('application/json')
+        }
+    }
+    response {
+        status(200)
+        headers {
+            contentType('application/json')
+        }
+        body("""
+              {
+                "name": "user",
+                "fullName": "fullName",
+                "phone": "987654321"
+              }
+        """)
+    }
+}
+```
+
+after create your contract, if you're using maven, you have to execute this commad:
+
+```
+mvn clean install -DskipTests 
+```
+
+this command generate a stubs jar target/ and mapping wiremock in target/stubs/*
+
 ### Consumer
 
 After to create your producer side, you can use Spring Cloud Contract Stub Runner in the integration tests to get a running WireMock instance or messaging route that simulates the actual service.
