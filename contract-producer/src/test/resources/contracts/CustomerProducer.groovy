@@ -15,12 +15,10 @@ org.springframework.cloud.contract.spec.Contract.make {
         headers {
             contentType('application/json')
         }
-        body("""
-              {
+        body([
                 "name": "user",
                 "fullName": "fullName",
                 "phone": "987654321"
-              }
-        """)
+        ])
     }
 }
