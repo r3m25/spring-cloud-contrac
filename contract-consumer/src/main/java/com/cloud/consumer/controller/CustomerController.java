@@ -43,5 +43,4 @@ public class CustomerController {
                 .phone(customerClient.getPhone())
                 .build();
     }
-
 }

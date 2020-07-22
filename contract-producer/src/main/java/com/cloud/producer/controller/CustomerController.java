@@ -15,8 +15,9 @@ public class CustomerController {
 
     private Customer buildCustomer()  {
         return Customer.builder()
-                .name("ruben")
-                .lastName("morales")
+                .name("user")
+                .fullName("fullName")
+                .phone("987654321")
                 .build();
     }
 }

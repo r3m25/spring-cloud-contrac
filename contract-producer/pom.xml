@@ -63,7 +63,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<baseClassForTests>
-						com.cloud.producer.configuration.CustomerControllerBase
+						com.cloud.producer.base.BaseClass
 					</baseClassForTests>
 				</configuration>
 			</plugin>
