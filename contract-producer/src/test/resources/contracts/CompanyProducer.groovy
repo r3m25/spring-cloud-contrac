@@ -1,8 +1,10 @@
 package contracts
 
-org.springframework.cloud.contract.spec.Contract.make {
+import org.springframework.cloud.contract.spec.Contract
 
-    description("Should return all customer")
+Contract.make {
+
+    description("Should return list companies")
     request {
         method('GET')
         urlPath('/companies')
